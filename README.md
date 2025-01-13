@@ -1,5 +1,19 @@
 # codetech_task_2.4
 
+Name:Parth Deorukhkar
+
+Company:CODETECH IT SOLLUTION
+
+ID:CT08EIV
+
+Domain:Python
+
+Duration:Dec17 to Jan 17
+
+Mentor:Neela Santosh Kumar
+
+
+
 SMS Spam Collection Data Extraction and Loading
 This Python script automates the process of extracting and loading the SMS Spam Collection dataset. The dataset contains labeled SMS messages for binary classification as "spam" or "ham" (not spam).
 
