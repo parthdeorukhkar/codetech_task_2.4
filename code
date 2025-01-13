@@ -1,0 +1,28 @@
+import zipfile
+import pandas as pd
+import os
+
+# Define the URL and file path
+data_url = "https://archive.ics.uci.edu/ml/machine-learning-databases/00228/smsspamcollection.zip"
+zip_file = "smsspamcollection.zip"
+extracted_folder = "smsspamcollection"
+
+# Download the file using requests or manually (if it's already downloaded)
+# If the file isn't downloaded yet, we would typically use requests to download it.
+# Since I don't have internet access, you need to download it manually and put it in the working directory.
+
+# Extract the ZIP file
+with zipfile.ZipFile(zip_file, 'r') as zip_ref:
+    zip_ref.extractall(extracted_folder)
+
+# List the extracted files
+extracted_files = os.listdir(extracted_folder)
+print("Extracted files:", extracted_files)
+
+# Now load the dataset
+file_path = os.path.join(extracted_folder, "SMSSpamCollection")
+data = pd.read_csv(file_path, sep='\t', header=None, names=['label', 'message'])
+
+# Display the first few rows
+print("\nDataset preview:")
+print(data.head())
